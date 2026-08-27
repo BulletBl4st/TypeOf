@@ -38,7 +38,6 @@
             lbPoints = new Label();
             tbPoints = new TextBox();
             pictureBox1 = new PictureBox();
-            timer1 = new System.Windows.Forms.Timer(components);
             btnStart = new Button();
             lbTimer = new Label();
             timer2 = new System.Windows.Forms.Timer(components);
@@ -129,10 +128,6 @@
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
-            // timer1
-            // 
-            timer1.Tick += timer1_Tick;
-            // 
             // btnStart
             // 
             btnStart.Location = new Point(536, 304);
@@ -150,7 +145,7 @@
             lbTimer.Name = "lbTimer";
             lbTimer.Size = new Size(58, 23);
             lbTimer.TabIndex = 9;
-            lbTimer.Text = "1:40";
+            lbTimer.Text = "1:00";
             lbTimer.Visible = false;
             // 
             // timer2
@@ -162,7 +157,7 @@
             AutoScaleDimensions = new SizeF(12F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(1294, 701);
+            ClientSize = new Size(1220, 701);
             Controls.Add(lbTimer);
             Controls.Add(btnStart);
             Controls.Add(pictureBox1);
@@ -193,7 +188,6 @@
         private Label lbPoints;
         private TextBox tbPoints;
         private PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer1;
         private Button btnStart;
         private Label lbTimer;
         private System.Windows.Forms.Timer timer2;
