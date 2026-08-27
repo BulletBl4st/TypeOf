@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "difficulty": "Easy",
+    "text": "The quick brown fox jumps over the lazy dog.",
+    "length": 43
+  },
+  {
+    "id": 2,
+    "difficulty": "Easy",
+    "text": "Focus on speed and accuracy while typing today.",
+    "length": 47
+  },
+  {
+    "id": 3,
+    "difficulty": "Easy",
+    "text": "Keep your fingers resting on the home row keys.",
+    "length": 47
+  },
+  {
+    "id": 4,
+    "difficulty": "Easy",
+    "text": "Practice every single day to build muscle memory.",
+    "length": 49
+  },
+  {
+    "id": 5,
+    "difficulty": "Easy",
+    "text": "Smooth keystrokes are much better than rushing.",
+    "length": 46
+  },
+  {
+    "id": 6,
+    "difficulty": "Easy",
+    "text": "Look at the screen instead of your keyboard.",
+    "length": 44
+  },
+  {
+    "id": 7,
+    "difficulty": "Easy",
+    "text": "A light and steady touch keeps your wrists relaxed.",
+    "length": 51
+  },
+  {
+    "id": 8,
+    "difficulty": "Easy",
+    "text": "Consistency is the key to mastering typing skills.",
+    "length": 51
+  },
+  {
+    "id": 9,
+    "difficulty": "Easy",
+    "text": "Clear your mind and keep a steady typing rhythm.",
+    "length": 48
+  },
+  {
+    "id": 10,
+    "difficulty": "Easy",
+    "text": "Small daily gains compound into impressive speed.",
+    "length": 50
+  },
+  {
+    "id": 11,
+    "difficulty": "Medium",
+    "text": "Building a smooth typing rhythm is far more important than rushing every single keystroke.",
+    "length": 90
+  },
+  {
+    "id": 12,
+    "difficulty": "Medium",
+    "text": "Developing clean muscle memory prevents common fatigue and reduces long-term wrist strain.",
+    "length": 91
+  },
+  {
+    "id": 13,
+    "difficulty": "Medium",
+    "text": "Modern web development requires both creative design skills and efficient coding practice.",
+    "length": 90
+  },
+  {
+    "id": 14,
+    "difficulty": "Medium",
+    "text": "When learning to type faster, try not to glance down at the keys when you make a mistake.",
+    "length": 90
+  },
+  {
+    "id": 15,
+    "difficulty": "Medium",
+    "text": "Data structures like arrays and hash maps allow programmers to store and retrieve info fast.",
+    "length": 92
+  },
+  {
+    "id": 16,
+    "difficulty": "Medium",
+    "text": "A well-designed interface ensures users can complete tasks effortlessly without confusion.",
+    "length": 90
+  },
+  {
+    "id": 17,
+    "category": "Intermediate",
+    "text": "The atmosphere of the quiet library was conducive to deep focus and uninterrupted study.",
+    "length": 89
+  },
+  {
+    "id": 18,
+    "difficulty": "Medium",
+    "text": "Calculus helps us understand how quantities change over time through derivatives and limits.",
+    "length": 93
+  },
+  {
+    "id": 19,
+    "difficulty": "Medium",
+    "text": "Network security relies heavily on robust encryption protocols to keep data transfers safe.",
+    "length": 92
+  },
+  {
+    "id": 20,
+    "difficulty": "Medium",
+    "text": "Iterative design involves making small prototype updates based on real user feedback.",
+    "length": 86
+  },
+  {
+    "id": 21,
+    "difficulty": "Hard",
+    "text": "\"Success is not final, failure is not fatal: it is the courage to continue that counts.\"",
+    "length": 88
+  },
+  {
+    "id": 22,
+    "difficulty": "Hard",
+    "text": "Although the storm raged outside, the lighthouse beam cut steadily through the thick fog.",
+    "length": 90
+  },
+  {
+    "id": 23,
+    "difficulty": "Hard",
+    "text": "The algorithm optimized the search process, reducing execution time from minutes to seconds.",
+    "length": 92
+  },
+  {
+    "id": 24,
+    "difficulty": "Hard",
+    "text": "To achieve high performance in database queries, indexing key columns is absolutely critical.",
+    "length": 94
+  },
+  {
+    "id": 25,
+    "difficulty": "Hard",
+    "text": "\"Simplicity is prerequisite for reliability,\" wrote Edsger Dijkstra in his notes on software.",
+    "length": 93
+  },
+  {
+    "id": 26,
+    "difficulty": "Hard",
+    "text": "Macroeconomics analyzes national aggregate expenditure, inflation rates, and trade balances.",
+    "length": 92
+  },
+  {
+    "id": 27,
+    "difficulty": "Hard",
+    "text": "Architectural patterns like Model-View-Controller separate data management from user display.",
+    "length": 93
+  },
+  {
+    "id": 28,
+    "difficulty": "Hard",
+    "text": "Understanding the underlying hardware architecture helps developers write optimized code.",
+    "length": 90
+  },
+  {
+    "id": 29,
+    "difficulty": "Hard",
+    "text": "The server responded with HTTP status 200 (OK), indicating the payload was parsed properly.",
+    "length": 91
+  },
+  {
+    "id": 30,
+    "difficulty": "Hard",
+    "text": "Continuous integration pipelines automate testing to catch bugs before code hits production.",
+    "length": 94
+  },
+  {
+    "id": 31,
+    "difficulty": "Expert",
+    "text": "In 2026, over 85% of developers typed at 70+ WPM; did you reach your personal goal?",
+    "length": 81
+  },
+  {
+    "id": 32,
+    "difficulty": "Expert",
+    "text": "Call support at +1 (800) 555-0199 or email standard_help@company-domain.org for info!",
+    "length": 86
+  },
+  {
+    "id": 33,
+    "difficulty": "Expert",
+    "text": "Order #4892 subtotal: $149.99; discount applied: -15%; final total due: $127.49.",
+    "length": 79
+  },
+  {
+    "id": 34,
+    "difficulty": "Expert",
+    "text": "The IPv4 address 192.168.1.1/24 specifies a subnet mask of 255.255.255.0 for network hosts.",
+    "length": 90
+  },
+  {
+    "id": 35,
+    "difficulty": "Expert",
+    "text": "Equation check: f(x) = 3x^2 + 5x - 12; solve for f(x) = 0 using x = [-b ± √(b²-4ac)] / 2a.",
+    "length": 88
+  },
+  {
+    "id": 36,
+    "difficulty": "Expert",
+    "text": "\"Wait!\" she exclaimed, \"is that 100% accurate, or is it just an rough estimate (v1.0.4)?\"",
+    "length": 89
+  },
+  {
+    "id": 37,
+    "difficulty": "Expert",
+    "text": "API response payload: {\"status\": 200, \"message\": \"Success!\", \"data_count\": 50, \"active\": true}.",
+    "length": 94
+  },
+  {
+    "id": 38,
+    "difficulty": "Expert",
+    "text": "Git command log: `git commit -m \"fix: update regex filter [v2.1.0]\" --no-verify` executed.",
+    "length": 90
+  },
+  {
+    "id": 39,
+    "difficulty": "Expert",
+    "text": "Password rule check: Min 12 chars, 1 uppercase [A-Z], 1 symbol (!@#$%^&*), 2 digits (0-9).",
+    "length": 90
+  },
+  {
+    "id": 40,
+    "difficulty": "Expert",
+    "text": "Price breakdown: $19.99 basic, $49.50 pro, $99.00 enterprise (VAT @ 18% excluded).",
+    "length": 82
+  },
+  {
+    "id": 41,
+    "difficulty": "Technical",
+    "text": "const totalSum = numbers.reduce((acc, curr) => acc + curr, 0);",
+    "length": 62
+  },
+  {
+    "id": 42,
+    "difficulty": "Technical",
+    "text": "SELECT u.id, u.name, COUNT(o.id) FROM users u JOIN orders o ON u.id = o.user_id GROUP BY u.id;",
+    "length": 94
+  },
+  {
+    "id": 43,
+    "difficulty": "Technical",
+    "text": "public async Task<IActionResult> GetDataAsync(int id) { return Ok(await _service.Get(id)); }",
+    "length": 92
+  },
+  {
+    "id": 44,
+    "difficulty": "Technical",
+    "text": "for (let i = 0; i < items.length; i++) { console.log(`Item ${i}:`, items[i]); }",
+    "length": 79
+  },
+  {
+    "id": 45,
+    "difficulty": "Technical",
+    "text": "if (user != null && user.IsActive) { SaveUser(user); } else { ThrowError(\"Invalid User\"); }",
+    "length": 92
+  },
+  {
+    "id": 46,
+    "difficulty": "Technical",
+    "text": "docker run -d -p 8080:80 --name my_app_container -e NODE_ENV=production my_image:latest",
+    "length": 88
+  },
+  {
+    "id": 47,
+    "difficulty": "Technical",
+    "text": "def calculate_matrix_determinant(matrix: list[list[float]]) -> float:",
+    "length": 69
+  },
+  {
+    "id": 48,
+    "difficulty": "Technical",
+    "text": "plt.plot(x_values, y_values, color='blue', linestyle='--', label='Target Curve')",
+    "length": 81
+  },
+  {
+    "id": 49,
+    "difficulty": "Technical",
+    "text": "npm install --save-dev typescript @types/node eslint prettier jest",
+    "length": 67
+  },
+  {
+    "id": 50,
+    "difficulty": "Technical",
+    "text": "git checkout -b feature/auth-workflow origin/main && git pull",
+    "length": 61
+  }
+]
