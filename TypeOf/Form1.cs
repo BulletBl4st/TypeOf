@@ -2,10 +2,13 @@ namespace TypeOf
 {
     public partial class Form1 : Form
     {
+        int timeLeft;
         public Form1()
         {
             InitializeComponent();
-            timer1.Interval = 100;
+            timer1.Interval = 1000;
+            timer2.Interval = 1000;
+            timeLeft = 100;
         }
 
         private void InputAnswer(object sender, KeyPressEventArgs e)
@@ -27,12 +30,23 @@ namespace TypeOf
             lbTimer.Visible = true;
             timer1.Enabled = true;
             timer1.Start();
-
+            timer2.Start();
+            timeLeft = 100;
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
+        }
 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (timeLeft> 0)
+            {
+                timeLeft--;
+                lbTimer.Text = String.Format("{0}:{1}", timeLeft / 60, timeLeft % 60);
+            }
         }
     }
 }

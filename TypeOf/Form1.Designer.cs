@@ -41,6 +41,7 @@
             timer1 = new System.Windows.Forms.Timer(components);
             btnStart = new Button();
             lbTimer = new Label();
+            timer2 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -152,6 +153,10 @@
             lbTimer.Text = "1:40";
             lbTimer.Visible = false;
             // 
+            // timer2
+            // 
+            timer2.Tick += timer2_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(12F, 23F);
@@ -191,5 +196,6 @@
         private System.Windows.Forms.Timer timer1;
         private Button btnStart;
         private Label lbTimer;
+        private System.Windows.Forms.Timer timer2;
     }
 }
