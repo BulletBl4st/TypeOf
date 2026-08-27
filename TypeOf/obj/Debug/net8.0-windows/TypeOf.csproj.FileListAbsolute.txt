@@ -33,3 +33,6 @@ D:\files\Apps\GitHub\GITHUB REPOS\Visual-Programming-project\TypeOf\obj\Debug\ne
 D:\files\Apps\GitHub\GITHUB REPOS\Visual-Programming-project\TypeOf\obj\Debug\net8.0-windows\TypeOf.sourcelink.json
 D:\files\Apps\GitHub\GITHUB REPOS\Visual-Programming-project\TypeOf\obj\Debug\net8.0-windows\TypeOf.genruntimeconfig.cache
 D:\files\Apps\GitHub\GITHUB REPOS\Visual-Programming-project\TypeOf\obj\Debug\net8.0-windows\ref\TypeOf.dll
+D:\files\Apps\GitHub\GITHUB REPOS\Visual-Programming-project\TypeOf\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\files\Apps\GitHub\GITHUB REPOS\Visual-Programming-project\TypeOf\obj\Debug\net8.0-windows\TypeOf.csproj.AssemblyReference.cache
+D:\files\Apps\GitHub\GITHUB REPOS\Visual-Programming-project\TypeOf\obj\Debug\net8.0-windows\TypeOf.csproj.Up2Date
