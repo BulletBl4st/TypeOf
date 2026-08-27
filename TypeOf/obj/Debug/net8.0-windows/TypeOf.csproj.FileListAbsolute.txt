@@ -1,0 +1,17 @@
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\bin\Debug\net8.0-windows\TypeOf.exe
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\bin\Debug\net8.0-windows\TypeOf.deps.json
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\bin\Debug\net8.0-windows\TypeOf.runtimeconfig.json
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\bin\Debug\net8.0-windows\TypeOf.dll
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\bin\Debug\net8.0-windows\TypeOf.pdb
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\TypeOf.Form1.resources
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\TypeOf.Properties.Resources.resources
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\TypeOf.csproj.GenerateResource.cache
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\TypeOf.GeneratedMSBuildEditorConfig.editorconfig
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\TypeOf.AssemblyInfoInputs.cache
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\TypeOf.AssemblyInfo.cs
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\TypeOf.csproj.CoreCompileInputs.cache
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\TypeOf.dll
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\refint\TypeOf.dll
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\TypeOf.pdb
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\TypeOf.genruntimeconfig.cache
+D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\ref\TypeOf.dll
