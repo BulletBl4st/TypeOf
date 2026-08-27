@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\files\\NEVIDENA BOLEST\\Po-nevazno sranje\\VP\\Proekt\\TypeOf\\TypeOf\\TypeOf.csproj": {}
+    "D:\\files\\Apps\\GitHub\\GITHUB REPOS\\Visual-Programming-project\\TypeOf\\TypeOf.csproj": {}
   },
   "projects": {
-    "D:\\files\\NEVIDENA BOLEST\\Po-nevazno sranje\\VP\\Proekt\\TypeOf\\TypeOf\\TypeOf.csproj": {
+    "D:\\files\\Apps\\GitHub\\GITHUB REPOS\\Visual-Programming-project\\TypeOf\\TypeOf.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\files\\NEVIDENA BOLEST\\Po-nevazno sranje\\VP\\Proekt\\TypeOf\\TypeOf\\TypeOf.csproj",
+        "projectUniqueName": "D:\\files\\Apps\\GitHub\\GITHUB REPOS\\Visual-Programming-project\\TypeOf\\TypeOf.csproj",
         "projectName": "TypeOf",
-        "projectPath": "D:\\files\\NEVIDENA BOLEST\\Po-nevazno sranje\\VP\\Proekt\\TypeOf\\TypeOf\\TypeOf.csproj",
+        "projectPath": "D:\\files\\Apps\\GitHub\\GITHUB REPOS\\Visual-Programming-project\\TypeOf\\TypeOf.csproj",
         "packagesPath": "C:\\Users\\bulle\\.nuget\\packages\\",
-        "outputPath": "D:\\files\\NEVIDENA BOLEST\\Po-nevazno sranje\\VP\\Proekt\\TypeOf\\TypeOf\\obj\\",
+        "outputPath": "D:\\files\\Apps\\GitHub\\GITHUB REPOS\\Visual-Programming-project\\TypeOf\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bulle\\AppData\\Roaming\\NuGet\\NuGet.Config",

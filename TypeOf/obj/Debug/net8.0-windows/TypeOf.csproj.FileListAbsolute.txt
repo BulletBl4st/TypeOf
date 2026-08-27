@@ -15,3 +15,6 @@ D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net
 D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\TypeOf.pdb
 D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\TypeOf.genruntimeconfig.cache
 D:\files\NEVIDENA BOLEST\Po-nevazno sranje\VP\Proekt\TypeOf\TypeOf\obj\Debug\net8.0-windows\ref\TypeOf.dll
+D:\files\Apps\GitHub\GITHUB REPOS\Visual-Programming-project\TypeOf\obj\Debug\net8.0-windows\TypeOf.dll
+D:\files\Apps\GitHub\GITHUB REPOS\Visual-Programming-project\TypeOf\obj\Debug\net8.0-windows\refint\TypeOf.dll
+D:\files\Apps\GitHub\GITHUB REPOS\Visual-Programming-project\TypeOf\obj\Debug\net8.0-windows\TypeOf.pdb
