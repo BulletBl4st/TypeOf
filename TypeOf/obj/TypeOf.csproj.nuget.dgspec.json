@@ -1,30 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\files\\Apps\\GitHub\\GITHUB REPOS\\Visual-Programming-project\\TypeOf\\TypeOf.csproj": {}
+    "C:\\Users\\marja\\Documents\\GitHub\\Visual-Programming-project\\TypeOf\\TypeOf.csproj": {}
   },
   "projects": {
-    "D:\\files\\Apps\\GitHub\\GITHUB REPOS\\Visual-Programming-project\\TypeOf\\TypeOf.csproj": {
+    "C:\\Users\\marja\\Documents\\GitHub\\Visual-Programming-project\\TypeOf\\TypeOf.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\files\\Apps\\GitHub\\GITHUB REPOS\\Visual-Programming-project\\TypeOf\\TypeOf.csproj",
+        "projectUniqueName": "C:\\Users\\marja\\Documents\\GitHub\\Visual-Programming-project\\TypeOf\\TypeOf.csproj",
         "projectName": "TypeOf",
-        "projectPath": "D:\\files\\Apps\\GitHub\\GITHUB REPOS\\Visual-Programming-project\\TypeOf\\TypeOf.csproj",
-        "packagesPath": "C:\\Users\\bulle\\.nuget\\packages\\",
-        "outputPath": "D:\\files\\Apps\\GitHub\\GITHUB REPOS\\Visual-Programming-project\\TypeOf\\obj\\",
+        "projectPath": "C:\\Users\\marja\\Documents\\GitHub\\Visual-Programming-project\\TypeOf\\TypeOf.csproj",
+        "packagesPath": "C:\\Users\\marja\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marja\\Documents\\GitHub\\Visual-Programming-project\\TypeOf\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bulle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marja\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0-windows7.0": {
+          "net8.0-windows": {
+            "framework": "net8.0-windows7.0",
             "targetAlias": "net8.0-windows",
             "projectReferences": {}
           }
@@ -39,10 +41,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
-        "net8.0-windows7.0": {
+        "net8.0-windows": {
+          "framework": "net8.0-windows7.0",
           "targetAlias": "net8.0-windows",
           "dependencies": {
             "Newtonsoft.Json": {
@@ -69,7 +72,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

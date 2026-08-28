@@ -52,7 +52,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(483, 77);
             label1.Name = "label1";
-            label1.Size = new Size(178, 23);
+            label1.Size = new Size(167, 24);
             label1.TabIndex = 0;
             label1.Text = "Game Logo here";
             // 
@@ -74,7 +74,7 @@
             lbChallange.AutoSize = true;
             lbChallange.Location = new Point(507, 204);
             lbChallange.Name = "lbChallange";
-            lbChallange.Size = new Size(22, 23);
+            lbChallange.Size = new Size(16, 24);
             lbChallange.TabIndex = 2;
             lbChallange.Text = " ";
             lbChallange.Visible = false;
@@ -86,7 +86,7 @@
             tbInput.ForeColor = SystemColors.Menu;
             tbInput.Location = new Point(449, 449);
             tbInput.Name = "tbInput";
-            tbInput.Size = new Size(380, 30);
+            tbInput.Size = new Size(380, 29);
             tbInput.TabIndex = 3;
             tbInput.Visible = false;
             tbInput.TextChanged += tbInput_TextChanged;
@@ -96,7 +96,7 @@
             lbInput.AutoSize = true;
             lbInput.Location = new Point(325, 452);
             lbInput.Name = "lbInput";
-            lbInput.Size = new Size(118, 23);
+            lbInput.Size = new Size(106, 24);
             lbInput.TabIndex = 4;
             lbInput.Text = "Type here";
             lbInput.Visible = false;
@@ -106,7 +106,7 @@
             lbPoints.AutoSize = true;
             lbPoints.Location = new Point(299, 362);
             lbPoints.Name = "lbPoints";
-            lbPoints.Size = new Size(202, 23);
+            lbPoints.Size = new Size(148, 24);
             lbPoints.TabIndex = 5;
             lbPoints.Text = "Points this run:";
             lbPoints.Visible = false;
@@ -139,7 +139,7 @@
             btnStart.BackgroundImage = (Image)resources.GetObject("btnStart.BackgroundImage");
             btnStart.FlatStyle = FlatStyle.Popup;
             btnStart.ForeColor = SystemColors.Control;
-            btnStart.Location = new Point(491, 317);
+            btnStart.Location = new Point(483, 334);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(170, 81);
             btnStart.TabIndex = 8;
@@ -152,7 +152,7 @@
             lbTimer.AutoSize = true;
             lbTimer.Location = new Point(559, 204);
             lbTimer.Name = "lbTimer";
-            lbTimer.Size = new Size(58, 23);
+            lbTimer.Size = new Size(49, 24);
             lbTimer.TabIndex = 9;
             lbTimer.Text = "1:00";
             lbTimer.Visible = false;
@@ -166,7 +166,7 @@
             listPrev.BackColor = SystemColors.ControlDarkDark;
             listPrev.ForeColor = SystemColors.Menu;
             listPrev.FormattingEnabled = true;
-            listPrev.ItemHeight = 23;
+            listPrev.ItemHeight = 24;
             listPrev.Location = new Point(927, 88);
             listPrev.Name = "listPrev";
             listPrev.Size = new Size(272, 556);
@@ -178,7 +178,7 @@
             lbPrev.AutoSize = true;
             lbPrev.Location = new Point(927, 62);
             lbPrev.Name = "lbPrev";
-            lbPrev.Size = new Size(214, 23);
+            lbPrev.Size = new Size(177, 24);
             lbPrev.TabIndex = 11;
             lbPrev.Text = "Previous Attempts";
             lbPrev.Visible = false;
@@ -188,14 +188,14 @@
             lbTimer2.AutoSize = true;
             lbTimer2.Location = new Point(423, 204);
             lbTimer2.Name = "lbTimer2";
-            lbTimer2.Size = new Size(130, 23);
+            lbTimer2.Size = new Size(102, 24);
             lbTimer2.TabIndex = 12;
             lbTimer2.Text = "Time Left:";
             lbTimer2.Visible = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(12F, 23F);
+            AutoScaleDimensions = new SizeF(12F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(1220, 701);
@@ -213,7 +213,7 @@
             Controls.Add(tbChallange);
             Controls.Add(label1);
             DoubleBuffered = true;
-            Font = new Font("Unispace", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Margin = new Padding(5);
             Name = "Form1";
             Text = "TypeOf";

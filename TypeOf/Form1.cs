@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+using System.Text.Json;
 namespace TypeOf
 {
     public partial class Form1 : Form
@@ -6,14 +6,22 @@ namespace TypeOf
         int timeLeft;
         int points;
         float accuracyPercent;
-        int correctWordsCount;
+        int correctWordsCount = 0;
+        int allWordsCount;
+        int incorrectWordsCount = 0;
         Game currentRun;
+        List<Sentence> sentenceList;
+
         public Form1()
         {
             InitializeComponent();
             timer2.Interval = 1000;
             timeLeft = 60;
             points = 0;
+            allWordsCount = 0;
+            sentenceList = new List<Sentence>();
+            readData();
+            tbInput.KeyUp += new KeyEventHandler(pressEnter);
         }
 
 
@@ -32,22 +40,45 @@ namespace TypeOf
         {
             btnStart.Enabled = false;
             btnStart.Visible = false;
+
             lbChallange.Visible = true;
-            tbChallange.Visible = true; tbChallange.Enabled = true;
+
+            tbChallange.Visible = true;
+            tbChallange.Enabled = true;
+
             lbInput.Visible = true;
-            tbInput.Visible = true; tbInput.Enabled = true;
+
+            tbInput.Visible = true;
+            tbInput.Enabled = true;
 
             lbPoints.Visible = true;
-            tbPoints.Visible = true; tbPoints.Enabled = true;
+
+            tbPoints.Visible = true;
+            tbPoints.Enabled = true;
+
             lbTimer.Visible = true;
             lbTimer2.Visible = true;
+
+            showData();
+
             timer2.Start();
-            timeLeft = 60;
-
-
+            timeLeft = 5;
         }
 
+        public void readData()
+        {
+            string jsonString = File.ReadAllText("sentences.json");
 
+            sentenceList = JsonSerializer.Deserialize<List<Sentence>>(jsonString);  
+        }
+
+        public void showData()
+        {
+            Random rnd = new Random();
+            int value = rnd.Next(1, 50);
+
+            tbChallange.Text = sentenceList[value].text.ToString();
+        }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -60,6 +91,7 @@ namespace TypeOf
             {
                 lbTimer.Text = String.Format("Time's Up");
                 timer2.Stop();
+                MessageBox.Show($"{correctWordsCount}, {incorrectWordsCount}");
                 //TODO, implement gameover
             }
         }
@@ -75,11 +107,30 @@ namespace TypeOf
                 points += 10;
                 //ToDO run the function that calculates accuracy
             }
-            else
+
+        }
+
+        private void pressEnter(object sender, KeyEventArgs e)
+        {
+            int temp = allWordsCount;
+            if (e.KeyCode == Keys.Enter) {
+                temp = 0;
+                tbChallange.Clear();
+                showData();
+            } else
             {
-                //ToDo, run the function that calculates accuracy
+                if (tbChallange.Text[temp].Equals(tbInput.Text[temp]))
+                {
+                    correctWordsCount++;
+                    temp++;
+                }
+                else
+                {
+                    incorrectWordsCount++;
+                    temp++; //TODO, Fix this
+                }
+                allWordsCount++;
             }
-            
         }
         // Koga igrata zavrsuva
         // lbPrev i listPrev treba da se napravat Visible, tamu e kade ke se displaynat previous attempts sto ke gi cuvame vo Game klasata
