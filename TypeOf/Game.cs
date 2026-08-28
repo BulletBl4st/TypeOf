@@ -18,5 +18,7 @@ namespace TypeOf
             Accuracy = accuracy;
             Score = score;
         }
+
+
     }
 }
