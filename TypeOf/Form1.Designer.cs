@@ -191,6 +191,7 @@
             lbTimer2.Size = new Size(130, 23);
             lbTimer2.TabIndex = 12;
             lbTimer2.Text = "Time Left:";
+            lbTimer2.Visible = false;
             // 
             // Form1
             // 
