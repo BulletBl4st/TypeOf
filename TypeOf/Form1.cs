@@ -27,42 +27,44 @@ namespace TypeOf
             points = 0;
             readData();
             tbInput.KeyUp += new KeyEventHandler(pressEnter);
+            tbInput.Select();
             showData();
             timer.Start();
+            //debug tool
             timeLeft = 5;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            btnStart.Enabled = false;
+            //btnStart.Enabled = false;
             btnStart.Visible = false;
 
             introLabel.Visible = false;
             difficultyLabel.Visible = false;
 
             normalModeButton.Visible = false;
-            normalModeButton.Enabled = false;
+            //normalModeButton.Enabled = false;
 
             hardModeButton.Visible = false;
-            hardModeButton.Enabled = false;
+            //hardModeButton.Enabled = false;
 
             advancedModeButton.Visible = false;
-            advancedModeButton.Enabled = false;
+            //advancedModeButton.Enabled = false;
 
             lbChallange.Visible = true;
 
             tbChallange.Visible = true;
-            tbChallange.Enabled = true;
+            //tbChallange.Enabled = true;
 
             lbInput.Visible = true;
 
             tbInput.Visible = true;
-            tbInput.Enabled = true;
+            //tbInput.Enabled = true;
 
             lbPoints.Visible = true;
 
-            tbPoints.Visible = true;
-            tbPoints.Enabled = true;
+            lbScore.Visible = true;
+            //tbPoints.Enabled = true;
 
             lbTimer.Visible = true;
             lbTimer2.Visible = true;
@@ -95,7 +97,7 @@ namespace TypeOf
         public void createAttempt(float accuracy)
         {
             int index = listAttempts.Items.Count + 1;
-            Attempt currentAttempt = new Attempt(index, accuracy);
+            Attempt currentAttempt = new Attempt(index, accuracy, points);
             listAttempts.Items.Add(currentAttempt.ToString());
         }
 
@@ -119,13 +121,20 @@ namespace TypeOf
                 retryButton.Enabled = true;
                 retryButton.Visible = true;
                 timer.Stop();
-                //TODO, implement gameover
+                listAttempts.Visible = true;
+
+                
+                createAttempt(accuracyPercentage(correctWordsCount, allWordsCount));
             }
         }
 
         private void tbInput_TextChanged(object sender, EventArgs e)
         {
             checkWords(tbInput.Text, temp);
+            //Points system
+            //points = correctWordsCount * 10;
+
+            lbScore.Text = points.ToString();
         }
 
         private void checkWords(string input, int index)
@@ -135,6 +144,7 @@ namespace TypeOf
                 if (tbChallange.Text[index].Equals(input[index]))
                 {
                     correctWordsCount++;
+                    points += 3;
                     allWordsCount++;
                     temp++;
                 }
@@ -167,26 +177,47 @@ namespace TypeOf
                     correctWordsCount--;
                     allWordsCount--;
                     incorrectWordsCount--;// placeholder, moze da se smeni
+                    points--;
                 }
             }
+        }
+        private void chooseDifficulty(string input)
+        {
+            difficulty = input;
+            btnStart.Enabled = true;
+            switch (input)
+            {
+                case "Normal": normalModeButton.BackColor = Color.DimGray; normalModeButton.ForeColor = Color.White;
+                    hardModeButton.BackColor = Color.White; hardModeButton.ForeColor = Color.Black;
+                    advancedModeButton.BackColor = Color.White; advancedModeButton.ForeColor = Color.Black;
+                    break;
+                case "Hard": hardModeButton.BackColor = Color.Gray; hardModeButton.ForeColor = Color.White;
+                    normalModeButton.BackColor = Color.White; normalModeButton.ForeColor = Color.Black;
+                    advancedModeButton.BackColor = Color.White; advancedModeButton.ForeColor = Color.Black;
+                    break; 
+                case "Advanced": advancedModeButton.BackColor = Color.IndianRed; advancedModeButton.ForeColor= Color.White;
+                    hardModeButton.BackColor = Color.White; hardModeButton.ForeColor = Color.Black;
+                    normalModeButton.BackColor = Color.White; normalModeButton.ForeColor = Color.Black;
+                    break;
+            }
+
+
         }
 
         private void normalModeButton_Click(object sender, EventArgs e)
         {
-            difficulty = "Normal";
-            btnStart.Enabled = true;
+            chooseDifficulty("Normal");
+
         }
 
         private void hardModeButton_Click(object sender, EventArgs e)
         {
-            difficulty = "Hard";
-            btnStart.Enabled = true;
+            chooseDifficulty("Hard");
         }
 
         private void advancedModeButton_Click(object sender, EventArgs e)
         {
-            difficulty = "Advanced";
-            btnStart.Enabled = true;
+            chooseDifficulty("Advanced");
         }
 
         public void reset()
@@ -195,15 +226,60 @@ namespace TypeOf
             correctWordsCount = 0;
             allWordsCount = 0;
             incorrectWordsCount = 0;
+            points = 0;
             temp = 0;
         }
 
         private void retryButton_Click_1(object sender, EventArgs e)
         {
+            retryButton.Visible = false;
+            retryButton.Enabled = false;
+            homeButton.Visible = false;
+            homeButton.Enabled = false;
+
             tbInput.ReadOnly = false;
             reset();
             startGame();
             tbInput.Select();
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            btnStart.Enabled = false;
+            btnStart.Visible = true;
+
+            introLabel.Visible = true;
+            difficultyLabel.Visible = true;
+
+            normalModeButton.Visible = true;
+            //normalModeButton.Enabled = true;
+
+            hardModeButton.Visible = true;
+            //hardModeButton.Enabled = true;
+            advancedModeButton.Visible = true;
+            //advancedModeButton.Enabled = true;
+
+            lbChallange.Visible = false;
+            tbChallange.Visible = false;
+            //tbChallange.Enabled = false;
+
+            lbInput.Visible = false;
+            tbInput.Visible = false;
+
+            //tbInput.Enabled = false;
+            lbPoints.Visible = false;
+            lbScore.Visible = false;
+            //tbPoints.Enabled = false;
+
+            lbTimer.Visible = false;
+            lbTimer2.Visible = false;
+
+            retryButton.Visible = false;
+            homeButton.Visible = false;
+            listAttempts.Visible = false;
+            reset();
+            lbScore.Text = "0";
+            tbInput.ReadOnly = false;
         }
 
         // Koga igrata zavrsuva
