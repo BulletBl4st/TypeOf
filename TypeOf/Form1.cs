@@ -84,6 +84,11 @@ namespace TypeOf
             tbChallange.Text = filteredSentences[value].text.ToString();
         }
 
+        public float accuracyPercentage(int a,int b)
+        {
+            return ((float)a / b)*100;
+        }
+
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (timeLeft > 0)
@@ -95,7 +100,7 @@ namespace TypeOf
             {
                 lbTimer.Text = String.Format("Time's Up");
                 timer2.Stop();
-                MessageBox.Show($"{correctWordsCount}, {incorrectWordsCount},{allWordsCount}");
+                MessageBox.Show($"{correctWordsCount}, {incorrectWordsCount},{allWordsCount},\n{accuracyPercentage(correctWordsCount,allWordsCount).ToString("F2")}%");
                 //TODO, implement gameover
             }
         }
