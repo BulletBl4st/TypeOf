@@ -5,12 +5,14 @@ namespace TypeOf
     {
         int timeLeft;
         int points;
-        float accuracyPercent;
+
+        string difficulty="";
         int correctWordsCount = 0;
         int allWordsCount;
         int incorrectWordsCount = 0;
         Game currentRun;
-        List<Sentence> sentenceList;
+        List<Sentence>? sentenceList;
+        int temp = 0;
 
         public Form1()
         {
@@ -24,22 +26,22 @@ namespace TypeOf
             tbInput.KeyUp += new KeyEventHandler(pressEnter);
         }
 
-
-        //private void InputAnswer(object sender, KeyPressEventArgs e)
-        //{
-        //    if (e.KeyChar == (char)Keys.Enter)
-        //    {
-        //        //Take text from input field, compare to text currently in lbChallange
-        //        string answer = lbInput.Text;
-        //        MessageBox.Show("Enter is pressed");
-
-        //    }
-        //}
-
         private void btnStart_Click(object sender, EventArgs e)
         {
             btnStart.Enabled = false;
             btnStart.Visible = false;
+
+            introLabel.Visible = false;
+            difficultyLabel.Visible = false;
+
+            normalModeButton.Visible = false;
+            normalModeButton.Enabled = false;
+
+            hardModeButton.Visible = false;
+            hardModeButton.Enabled = false;
+
+            advancedModeButton.Visible = false;
+            advancedModeButton.Enabled = false;
 
             lbChallange.Visible = true;
 
@@ -69,15 +71,17 @@ namespace TypeOf
         {
             string jsonString = File.ReadAllText("sentences.json");
 
-            sentenceList = JsonSerializer.Deserialize<List<Sentence>>(jsonString);  
+            sentenceList = JsonSerializer.Deserialize<List<Sentence>>(jsonString);
         }
 
         public void showData()
         {
+            List<Sentence> filteredSentences = sentenceList.Where(s => s.difficulty == difficulty).ToList();
+            
             Random rnd = new Random();
-            int value = rnd.Next(1, 50);
+            int value = rnd.Next(1, filteredSentences.Count);
 
-            tbChallange.Text = sentenceList[value].text.ToString();
+            tbChallange.Text = filteredSentences[value].text.ToString();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -91,46 +95,58 @@ namespace TypeOf
             {
                 lbTimer.Text = String.Format("Time's Up");
                 timer2.Stop();
-                MessageBox.Show($"{correctWordsCount}, {incorrectWordsCount}");
+                MessageBox.Show($"{correctWordsCount}, {incorrectWordsCount},{allWordsCount}");
                 //TODO, implement gameover
             }
         }
 
         private void tbInput_TextChanged(object sender, EventArgs e)
         {
-            //TODO, compare current text of the textbox with the object storing the challange text
-            // Mislata mie, za sekoj zbor tocno napisan, dobivas 10 poeni (see points variable at top of file)
-            //i na sekoj correct, incorrect word accuracy se kalkulira odnovo, za ova imam i napraveno tbInput da ne prima backspace.
-            if (true)
+            checkWords(tbInput.Text, temp);
+        }
+
+        private void checkWords(string input, int index)
+        {
+            if (tbChallange.Text[index].Equals(input[index]))
             {
                 correctWordsCount++;
-                points += 10;
-                //ToDO run the function that calculates accuracy
+                allWordsCount++;
+                temp++;
             }
-
+            else
+            {
+                incorrectWordsCount++;
+                allWordsCount++;
+                temp++;
+            }
         }
 
         private void pressEnter(object sender, KeyEventArgs e)
         {
-            int temp = allWordsCount;
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 temp = 0;
                 tbChallange.Clear();
                 showData();
-            } else
-            {
-                if (tbChallange.Text[temp].Equals(tbInput.Text[temp]))
-                {
-                    correctWordsCount++;
-                    temp++;
-                }
-                else
-                {
-                    incorrectWordsCount++;
-                    temp++; //TODO, Fix this
-                }
-                allWordsCount++;
             }
+        }
+
+        private void normalModeButton_Click(object sender, EventArgs e)
+        {
+            difficulty = "Normal";
+            btnStart.Enabled = true;
+        }
+
+        private void hardModeButton_Click(object sender, EventArgs e)
+        {
+            difficulty = "Hard";
+            btnStart.Enabled = true;
+        }
+
+        private void advancedModeButton_Click(object sender, EventArgs e)
+        {
+            difficulty = "Advanced";
+            btnStart.Enabled = true;
         }
         // Koga igrata zavrsuva
         // lbPrev i listPrev treba da se napravat Visible, tamu e kade ke se displaynat previous attempts sto ke gi cuvame vo Game klasata

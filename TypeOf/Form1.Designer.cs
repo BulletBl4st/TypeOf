@@ -44,6 +44,11 @@
             listPrev = new ListBox();
             lbPrev = new Label();
             lbTimer2 = new Label();
+            advancedModeButton = new Button();
+            hardModeButton = new Button();
+            normalModeButton = new Button();
+            introLabel = new Label();
+            difficultyLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -65,7 +70,7 @@
             tbChallange.Multiline = true;
             tbChallange.Name = "tbChallange";
             tbChallange.ReadOnly = true;
-            tbChallange.Size = new Size(622, 81);
+            tbChallange.Size = new Size(622, 62);
             tbChallange.TabIndex = 1;
             tbChallange.Visible = false;
             // 
@@ -84,9 +89,9 @@
             tbInput.BackColor = SystemColors.ControlDarkDark;
             tbInput.Enabled = false;
             tbInput.ForeColor = SystemColors.Menu;
-            tbInput.Location = new Point(449, 449);
+            tbInput.Location = new Point(411, 449);
             tbInput.Name = "tbInput";
-            tbInput.Size = new Size(380, 29);
+            tbInput.Size = new Size(510, 29);
             tbInput.TabIndex = 3;
             tbInput.Visible = false;
             tbInput.TextChanged += tbInput_TextChanged;
@@ -94,7 +99,7 @@
             // lbInput
             // 
             lbInput.AutoSize = true;
-            lbInput.Location = new Point(325, 452);
+            lbInput.Location = new Point(299, 452);
             lbInput.Name = "lbInput";
             lbInput.Size = new Size(106, 24);
             lbInput.TabIndex = 4;
@@ -137,9 +142,10 @@
             // btnStart
             // 
             btnStart.BackgroundImage = (Image)resources.GetObject("btnStart.BackgroundImage");
+            btnStart.Enabled = false;
             btnStart.FlatStyle = FlatStyle.Popup;
             btnStart.ForeColor = SystemColors.Control;
-            btnStart.Location = new Point(483, 334);
+            btnStart.Location = new Point(483, 484);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(170, 81);
             btnStart.TabIndex = 8;
@@ -150,7 +156,7 @@
             // lbTimer
             // 
             lbTimer.AutoSize = true;
-            lbTimer.Location = new Point(559, 204);
+            lbTimer.Location = new Point(601, 203);
             lbTimer.Name = "lbTimer";
             lbTimer.Size = new Size(49, 24);
             lbTimer.TabIndex = 9;
@@ -186,12 +192,60 @@
             // lbTimer2
             // 
             lbTimer2.AutoSize = true;
-            lbTimer2.Location = new Point(423, 204);
+            lbTimer2.Location = new Point(477, 203);
             lbTimer2.Name = "lbTimer2";
             lbTimer2.Size = new Size(102, 24);
             lbTimer2.TabIndex = 12;
             lbTimer2.Text = "Time Left:";
             lbTimer2.Visible = false;
+            // 
+            // advancedModeButton
+            // 
+            advancedModeButton.Location = new Point(650, 299);
+            advancedModeButton.Name = "advancedModeButton";
+            advancedModeButton.Size = new Size(112, 44);
+            advancedModeButton.TabIndex = 13;
+            advancedModeButton.Text = "Advanced";
+            advancedModeButton.UseVisualStyleBackColor = true;
+            advancedModeButton.Click += advancedModeButton_Click;
+            // 
+            // hardModeButton
+            // 
+            hardModeButton.Location = new Point(507, 300);
+            hardModeButton.Name = "hardModeButton";
+            hardModeButton.Size = new Size(112, 43);
+            hardModeButton.TabIndex = 14;
+            hardModeButton.Text = "Hard";
+            hardModeButton.UseVisualStyleBackColor = true;
+            hardModeButton.Click += hardModeButton_Click;
+            // 
+            // normalModeButton
+            // 
+            normalModeButton.Location = new Point(358, 300);
+            normalModeButton.Name = "normalModeButton";
+            normalModeButton.Size = new Size(112, 43);
+            normalModeButton.TabIndex = 15;
+            normalModeButton.Text = "Normal";
+            normalModeButton.UseVisualStyleBackColor = true;
+            normalModeButton.Click += normalModeButton_Click;
+            // 
+            // introLabel
+            // 
+            introLabel.AutoSize = true;
+            introLabel.Location = new Point(358, 157);
+            introLabel.Name = "introLabel";
+            introLabel.Size = new Size(404, 24);
+            introLabel.TabIndex = 16;
+            introLabel.Text = "Can you type as fast as you think you can?";
+            // 
+            // difficultyLabel
+            // 
+            difficultyLabel.AutoSize = true;
+            difficultyLabel.Location = new Point(447, 233);
+            difficultyLabel.Name = "difficultyLabel";
+            difficultyLabel.Size = new Size(216, 24);
+            difficultyLabel.TabIndex = 17;
+            difficultyLabel.Text = "Choose your difficulty:";
             // 
             // Form1
             // 
@@ -199,6 +253,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(1220, 701);
+            Controls.Add(difficultyLabel);
+            Controls.Add(introLabel);
+            Controls.Add(normalModeButton);
+            Controls.Add(hardModeButton);
+            Controls.Add(advancedModeButton);
             Controls.Add(lbTimer2);
             Controls.Add(lbPrev);
             Controls.Add(listPrev);
@@ -238,5 +297,10 @@
         private ListBox listPrev;
         private Label lbPrev;
         private Label lbTimer2;
+        private Button advancedModeButton;
+        private Button hardModeButton;
+        private Button normalModeButton;
+        private Label introLabel;
+        private Label difficultyLabel;
     }
 }
