@@ -221,7 +221,7 @@
             // 
             // normalModeButton
             // 
-            normalModeButton.Location = new Point(358, 300);
+            normalModeButton.Location = new Point(369, 300);
             normalModeButton.Name = "normalModeButton";
             normalModeButton.Size = new Size(112, 43);
             normalModeButton.TabIndex = 15;

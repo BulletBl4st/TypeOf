@@ -6,11 +6,11 @@ namespace TypeOf
         int timeLeft;
         int points;
 
-        string difficulty="";
+        string difficulty = "";
         int correctWordsCount = 0;
         int allWordsCount;
         int incorrectWordsCount = 0;
-        Game currentRun;
+        Game currentRun; //to store previous attempts in a list
         List<Sentence>? sentenceList;
         int temp = 0;
 
@@ -77,16 +77,16 @@ namespace TypeOf
         public void showData()
         {
             List<Sentence> filteredSentences = sentenceList.Where(s => s.difficulty == difficulty).ToList();
-            
+
             Random rnd = new Random();
             int value = rnd.Next(1, filteredSentences.Count);
 
             tbChallange.Text = filteredSentences[value].text.ToString();
         }
 
-        public float accuracyPercentage(int a,int b)
+        public float accuracyPercentage(int a, int b)
         {
-            return ((float)a / b)*100;
+            return ((float)a / b) * 100;
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -100,7 +100,7 @@ namespace TypeOf
             {
                 lbTimer.Text = String.Format("Time's Up");
                 timer2.Stop();
-                MessageBox.Show($"{correctWordsCount}, {incorrectWordsCount},{allWordsCount},\n{accuracyPercentage(correctWordsCount,allWordsCount).ToString("F2")}%");
+                MessageBox.Show($"{correctWordsCount}, {incorrectWordsCount},{allWordsCount},\n{accuracyPercentage(correctWordsCount, allWordsCount).ToString("F2")}%");
                 //TODO, implement gameover
             }
         }
@@ -112,17 +112,20 @@ namespace TypeOf
 
         private void checkWords(string input, int index)
         {
-            if (tbChallange.Text[index].Equals(input[index]))
+            if (index >= 0 && index < input.Length && index < tbChallange.TextLength)
             {
-                correctWordsCount++;
-                allWordsCount++;
-                temp++;
-            }
-            else
-            {
-                incorrectWordsCount++;
-                allWordsCount++;
-                temp++;
+                if (tbChallange.Text[index].Equals(input[index]))
+                {
+                    correctWordsCount++;
+                    allWordsCount++;
+                    temp++;
+                }
+                else
+                {
+                    incorrectWordsCount++;
+                    allWordsCount++;
+                    temp++;
+                }
             }
         }
 
@@ -133,6 +136,16 @@ namespace TypeOf
                 temp = 0;
                 tbChallange.Clear();
                 showData();
+            }
+            else if (e.KeyCode == Keys.Back)
+            {
+                if (temp > 0)
+                {
+                    temp--;
+                    correctWordsCount--;
+                    allWordsCount--;
+                    incorrectWordsCount--;// placeholder, moze da se smeni
+                }
             }
         }
 
@@ -153,6 +166,8 @@ namespace TypeOf
             difficulty = "Advanced";
             btnStart.Enabled = true;
         }
+
+
         // Koga igrata zavrsuva
         // lbPrev i listPrev treba da se napravat Visible, tamu e kade ke se displaynat previous attempts sto ke gi cuvame vo Game klasata
         // ^^^ na sekoj game over pred da se resetiraat values, da se prenesat site points i stvari vo Object od tip na Game -currentGame objektot za ova
