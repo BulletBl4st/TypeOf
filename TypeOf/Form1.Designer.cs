@@ -47,6 +47,8 @@
             normalModeButton = new Button();
             introLabel = new Label();
             difficultyLabel = new Label();
+            pbCredit = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pbCredit).BeginInit();
             SuspendLayout();
             // 
             // tbChallange
@@ -166,9 +168,9 @@
             listPrev.ForeColor = SystemColors.Menu;
             listPrev.FormattingEnabled = true;
             listPrev.ItemHeight = 23;
-            listPrev.Location = new Point(852, 122);
+            listPrev.Location = new Point(866, 122);
             listPrev.Name = "listPrev";
-            listPrev.Size = new Size(272, 556);
+            listPrev.Size = new Size(258, 556);
             listPrev.TabIndex = 10;
             listPrev.Visible = false;
             // 
@@ -178,7 +180,7 @@
             lbPrev.BackColor = Color.Transparent;
             lbPrev.Font = new Font("Rubik", 14.25F);
             lbPrev.ForeColor = Color.White;
-            lbPrev.Location = new Point(852, 85);
+            lbPrev.Location = new Point(866, 96);
             lbPrev.Name = "lbPrev";
             lbPrev.Size = new Size(179, 23);
             lbPrev.TabIndex = 11;
@@ -255,6 +257,17 @@
             difficultyLabel.TabIndex = 17;
             difficultyLabel.Text = "Choose your difficulty:";
             // 
+            // pbCredit
+            // 
+            pbCredit.Image = (Image)resources.GetObject("pbCredit.Image");
+            pbCredit.Location = new Point(12, 51);
+            pbCredit.Name = "pbCredit";
+            pbCredit.Size = new Size(349, 244);
+            pbCredit.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbCredit.TabIndex = 18;
+            pbCredit.TabStop = false;
+            pbCredit.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(12F, 24F);
@@ -263,6 +276,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1136, 701);
+            Controls.Add(pbCredit);
             Controls.Add(difficultyLabel);
             Controls.Add(introLabel);
             Controls.Add(normalModeButton);
@@ -284,6 +298,7 @@
             Margin = new Padding(5);
             Name = "Form1";
             Text = "TypeOf";
+            ((System.ComponentModel.ISupportInitialize)pbCredit).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -306,5 +321,6 @@
         private Button normalModeButton;
         private Label introLabel;
         private Label difficultyLabel;
+        private PictureBox pbCredit;
     }
 }
