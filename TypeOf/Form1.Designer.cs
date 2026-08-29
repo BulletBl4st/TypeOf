@@ -40,7 +40,7 @@
             pictureBox1 = new PictureBox();
             btnStart = new Button();
             lbTimer = new Label();
-            timer2 = new System.Windows.Forms.Timer(components);
+            timer = new System.Windows.Forms.Timer(components);
             listPrev = new ListBox();
             lbPrev = new Label();
             lbTimer2 = new Label();
@@ -163,9 +163,9 @@
             lbTimer.Text = "1:00";
             lbTimer.Visible = false;
             // 
-            // timer2
+            // timer
             // 
-            timer2.Tick += timer2_Tick;
+            timer.Tick += timer2_Tick;
             // 
             // listPrev
             // 
@@ -293,7 +293,7 @@
         private PictureBox pictureBox1;
         private Button btnStart;
         private Label lbTimer;
-        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer;
         private ListBox listPrev;
         private Label lbPrev;
         private Label lbTimer2;

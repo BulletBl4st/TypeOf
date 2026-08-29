@@ -17,11 +17,16 @@ namespace TypeOf
         public Form1()
         {
             InitializeComponent();
-            timer2.Interval = 1000;
+            startGame();
+        }
+
+        public void startGame()
+        {
+            sentenceList = new List<Sentence>();
+            timer.Interval = 1000;
             timeLeft = 60;
             points = 0;
             allWordsCount = 0;
-            sentenceList = new List<Sentence>();
             readData();
             tbInput.KeyUp += new KeyEventHandler(pressEnter);
         }
@@ -63,7 +68,7 @@ namespace TypeOf
 
             showData();
 
-            timer2.Start();
+            timer.Start();
             timeLeft = 5;
         }
 
@@ -99,7 +104,7 @@ namespace TypeOf
             else if (timeLeft == 0)
             {
                 lbTimer.Text = String.Format("Time's Up");
-                timer2.Stop();
+                timer.Stop();
                 MessageBox.Show($"{correctWordsCount}, {incorrectWordsCount},{allWordsCount},\n{accuracyPercentage(correctWordsCount, allWordsCount).ToString("F2")}%");
                 //TODO, implement gameover
             }
