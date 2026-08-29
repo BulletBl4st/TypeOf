@@ -7,9 +7,7 @@ Other features include: a unique visual style, a previous attempts tracker that 
 
 *The Previous attempts tracker resets on every new build of the game*
 
-##To run the game:
-- Download .exe file 
-OR
+## To run the game:
 - Download code -> download ZIP
 - Extract in a folder or anywhere
 - Run TypeOf.sln and build the app
