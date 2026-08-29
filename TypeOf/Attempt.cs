@@ -7,18 +7,21 @@ using System.Threading.Tasks;
 namespace TypeOf
 {
     public class Attempt
-    { 
-        public string Name { get; set; }
-        public int Accuracy { get; set; }
-        public int Score { get; set; }
+    {
+        public int Id { get; set; }
+        public float Accuracy { get; set; }
+        //public int Score { get; set; }
 
-        public Attempt(string name, int accuracy, int score)
+        public Attempt(int id, float accuracy)
         {
-            Name = name;
+            Id = id;
             Accuracy = accuracy;
-            Score = score;
+            //Score = score;
         }
 
-
+        public override string ToString()
+        {
+            return $"{Id}: {Accuracy:F2}%";
+        }
     }
 }

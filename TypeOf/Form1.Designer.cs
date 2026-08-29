@@ -39,7 +39,6 @@
             btnStart = new Button();
             lbTimer = new Label();
             timer = new System.Windows.Forms.Timer(components);
-            listPrev = new ListBox();
             lbPrev = new Label();
             lbTimer2 = new Label();
             advancedModeButton = new Button();
@@ -48,6 +47,9 @@
             introLabel = new Label();
             difficultyLabel = new Label();
             pbCredit = new PictureBox();
+            retryButton = new Button();
+            homeButton = new Button();
+            listAttempts = new ListView();
             ((System.ComponentModel.ISupportInitialize)pbCredit).BeginInit();
             SuspendLayout();
             // 
@@ -109,7 +111,7 @@
             lbPoints.BackColor = Color.Transparent;
             lbPoints.Font = new Font("Rubik", 14.25F);
             lbPoints.ForeColor = SystemColors.ButtonFace;
-            lbPoints.Location = new Point(217, 486);
+            lbPoints.Location = new Point(227, 483);
             lbPoints.Name = "lbPoints";
             lbPoints.Size = new Size(148, 23);
             lbPoints.TabIndex = 5;
@@ -122,7 +124,7 @@
             tbPoints.BackColor = Color.FromArgb(64, 64, 64);
             tbPoints.Enabled = false;
             tbPoints.Font = new Font("Rubik", 14.25F);
-            tbPoints.Location = new Point(385, 470);
+            tbPoints.Location = new Point(385, 465);
             tbPoints.Multiline = true;
             tbPoints.Name = "tbPoints";
             tbPoints.ReadOnly = true;
@@ -161,26 +163,13 @@
             // 
             timer.Tick += timer2_Tick;
             // 
-            // listPrev
-            // 
-            listPrev.BackColor = Color.FromArgb(64, 64, 64);
-            listPrev.Font = new Font("Rubik", 14.25F);
-            listPrev.ForeColor = SystemColors.Menu;
-            listPrev.FormattingEnabled = true;
-            listPrev.ItemHeight = 23;
-            listPrev.Location = new Point(866, 122);
-            listPrev.Name = "listPrev";
-            listPrev.Size = new Size(258, 556);
-            listPrev.TabIndex = 10;
-            listPrev.Visible = false;
-            // 
             // lbPrev
             // 
             lbPrev.AutoSize = true;
             lbPrev.BackColor = Color.Transparent;
             lbPrev.Font = new Font("Rubik", 14.25F);
             lbPrev.ForeColor = Color.White;
-            lbPrev.Location = new Point(866, 96);
+            lbPrev.Location = new Point(890, 104);
             lbPrev.Name = "lbPrev";
             lbPrev.Size = new Size(179, 23);
             lbPrev.TabIndex = 11;
@@ -259,7 +248,6 @@
             // 
             // pbCredit
             // 
-            pbCredit.Image = (Image)resources.GetObject("pbCredit.Image");
             pbCredit.Location = new Point(12, 51);
             pbCredit.Name = "pbCredit";
             pbCredit.Size = new Size(349, 244);
@@ -267,6 +255,44 @@
             pbCredit.TabIndex = 18;
             pbCredit.TabStop = false;
             pbCredit.Visible = false;
+            // 
+            // retryButton
+            // 
+            retryButton.BackgroundImage = (Image)resources.GetObject("retryButton.BackgroundImage");
+            retryButton.Enabled = false;
+            retryButton.Font = new Font("Rubik", 14.25F);
+            retryButton.ForeColor = SystemColors.Control;
+            retryButton.Location = new Point(653, 597);
+            retryButton.Name = "retryButton";
+            retryButton.Size = new Size(170, 81);
+            retryButton.TabIndex = 19;
+            retryButton.Text = "Retry";
+            retryButton.UseVisualStyleBackColor = true;
+            retryButton.Visible = false;
+            retryButton.Click += retryButton_Click_1;
+            // 
+            // homeButton
+            // 
+            homeButton.BackgroundImage = (Image)resources.GetObject("homeButton.BackgroundImage");
+            homeButton.Enabled = false;
+            homeButton.Font = new Font("Rubik", 14.25F);
+            homeButton.ForeColor = SystemColors.Control;
+            homeButton.Location = new Point(301, 597);
+            homeButton.Name = "homeButton";
+            homeButton.Size = new Size(170, 81);
+            homeButton.TabIndex = 20;
+            homeButton.Text = "Home";
+            homeButton.UseVisualStyleBackColor = true;
+            homeButton.Visible = false;
+            // 
+            // listAttempts
+            // 
+            listAttempts.Location = new Point(893, 130);
+            listAttempts.Name = "listAttempts";
+            listAttempts.Size = new Size(234, 228);
+            listAttempts.TabIndex = 21;
+            listAttempts.UseCompatibleStateImageBehavior = false;
+            listAttempts.View = View.SmallIcon;
             // 
             // Form1
             // 
@@ -276,6 +302,9 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1136, 701);
+            Controls.Add(listAttempts);
+            Controls.Add(homeButton);
+            Controls.Add(retryButton);
             Controls.Add(pbCredit);
             Controls.Add(difficultyLabel);
             Controls.Add(introLabel);
@@ -284,7 +313,6 @@
             Controls.Add(advancedModeButton);
             Controls.Add(lbTimer2);
             Controls.Add(lbPrev);
-            Controls.Add(listPrev);
             Controls.Add(lbTimer);
             Controls.Add(btnStart);
             Controls.Add(tbPoints);
@@ -313,7 +341,6 @@
         private Button btnStart;
         private Label lbTimer;
         private System.Windows.Forms.Timer timer;
-        private ListBox listPrev;
         private Label lbPrev;
         private Label lbTimer2;
         private Button advancedModeButton;
@@ -322,5 +349,8 @@
         private Label introLabel;
         private Label difficultyLabel;
         private PictureBox pbCredit;
+        private Button retryButton;
+        private Button homeButton;
+        private ListView listAttempts;
     }
 }

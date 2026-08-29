@@ -10,25 +10,26 @@ namespace TypeOf
         int correctWordsCount = 0;
         int allWordsCount;
         int incorrectWordsCount = 0;
-        Attempt currentRun; //to store previous attempts in a list
         List<Sentence>? sentenceList;
         int temp = 0;
 
         public Form1()
         {
             InitializeComponent();
-            startGame();
+            sentenceList = new List<Sentence>();
+            allWordsCount = 0;
         }
 
         public void startGame()
         {
-            sentenceList = new List<Sentence>();
             timer.Interval = 1000;
             timeLeft = 60;
             points = 0;
-            allWordsCount = 0;
             readData();
             tbInput.KeyUp += new KeyEventHandler(pressEnter);
+            showData();
+            timer.Start();
+            timeLeft = 5;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -66,10 +67,7 @@ namespace TypeOf
             lbTimer.Visible = true;
             lbTimer2.Visible = true;
 
-            showData();
-
-            timer.Start();
-            //timeLeft = 5;
+            startGame();
         }
 
         public void readData()
@@ -94,12 +92,19 @@ namespace TypeOf
             return ((float)a / b) * 100;
         }
 
+        public void createAttempt(float accuracy)
+        {
+            int index = listAttempts.Items.Count + 1;
+            Attempt currentAttempt = new Attempt(index, accuracy);
+            listAttempts.Items.Add(currentAttempt.ToString());
+        }
+
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (timeLeft > 0)
             {
                 timeLeft--;
-                if(timeLeft <= 30)
+                if (timeLeft <= 30)
                 {
                     lbTimer.ForeColor = Color.Red;
                 }
@@ -109,8 +114,11 @@ namespace TypeOf
             {
                 lbTimer.Text = String.Format("Time's Up!");
                 tbInput.ReadOnly = true;
+                homeButton.Enabled = true;
+                homeButton.Visible = true;
+                retryButton.Enabled = true;
+                retryButton.Visible = true;
                 timer.Stop();
-                MessageBox.Show($"{correctWordsCount}, {incorrectWordsCount},{allWordsCount},\n{accuracyPercentage(correctWordsCount, allWordsCount).ToString("F2")}%");
                 //TODO, implement gameover
             }
         }
@@ -181,6 +189,22 @@ namespace TypeOf
             btnStart.Enabled = true;
         }
 
+        public void reset()
+        {
+            tbInput.Clear();
+            correctWordsCount = 0;
+            allWordsCount = 0;
+            incorrectWordsCount = 0;
+            temp = 0;
+        }
+
+        private void retryButton_Click_1(object sender, EventArgs e)
+        {
+            tbInput.ReadOnly = false;
+            reset();
+            startGame();
+            tbInput.Select();
+        }
 
         // Koga igrata zavrsuva
         // lbPrev i listPrev treba da se napravat Visible, tamu e kade ke se displaynat previous attempts sto ke gi cuvame vo Game klasata
