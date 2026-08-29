@@ -10,7 +10,7 @@ namespace TypeOf
         int correctWordsCount = 0;
         int allWordsCount;
         int incorrectWordsCount = 0;
-        Game currentRun; //to store previous attempts in a list
+        Attempt currentRun; //to store previous attempts in a list
         List<Sentence>? sentenceList;
         int temp = 0;
 
@@ -69,7 +69,7 @@ namespace TypeOf
             showData();
 
             timer.Start();
-            timeLeft = 5;
+            //timeLeft = 5;
         }
 
         public void readData()
@@ -99,11 +99,16 @@ namespace TypeOf
             if (timeLeft > 0)
             {
                 timeLeft--;
+                if(timeLeft <= 30)
+                {
+                    lbTimer.ForeColor = Color.Red;
+                }
                 lbTimer.Text = String.Format("{0}:{1}", timeLeft / 60, timeLeft % 60);
             }
             else if (timeLeft == 0)
             {
-                lbTimer.Text = String.Format("Time's Up");
+                lbTimer.Text = String.Format("Time's Up!");
+                tbInput.ReadOnly = true;
                 timer.Stop();
                 MessageBox.Show($"{correctWordsCount}, {incorrectWordsCount},{allWordsCount},\n{accuracyPercentage(correctWordsCount, allWordsCount).ToString("F2")}%");
                 //TODO, implement gameover
@@ -138,6 +143,10 @@ namespace TypeOf
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (temp > 0)
+                {
+                    tbInput.Clear();
+                }
                 temp = 0;
                 tbChallange.Clear();
                 showData();

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace TypeOf
 {
-    public class Game
+    public class Attempt
     { 
         public string Name { get; set; }
         public int Accuracy { get; set; }
         public int Score { get; set; }
 
-        public Game(string name, int accuracy, int score)
+        public Attempt(string name, int accuracy, int score)
         {
             Name = name;
             Accuracy = accuracy;
